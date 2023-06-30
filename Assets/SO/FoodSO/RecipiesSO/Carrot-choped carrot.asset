@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a7bb546aaf20c48bc483c9700dd7cd, type: 3}
+  m_Name: Carrot-choped carrot
+  m_EditorClassIdentifier: 
+  input: {fileID: 11400000, guid: 0a273aebbbfb5864889b89980335c1be, type: 2}
+  output: {fileID: 11400000, guid: 0951e47329c41fe45b1687eb58d8e878, type: 2}
