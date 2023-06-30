@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Choped carrot
   m_EditorClassIdentifier: 
   prefab: {fileID: 4654967984476981069, guid: d2a620e8dcd1f53469c85585d2ca13df, type: 3}
-  icon: {fileID: 21300000, guid: efa142fb23786b141ad172bfbbc87f11, type: 3}
+  icon: {fileID: 21300000, guid: 5a0a0995c60c2454989d9984366a5f89, type: 3}
   objName: Choped carrot

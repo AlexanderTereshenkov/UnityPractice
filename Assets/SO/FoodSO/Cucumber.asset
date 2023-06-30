@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Cucumber
   m_EditorClassIdentifier: 
   prefab: {fileID: 5462651728096671286, guid: 49a40310669b254468544fe248dbd235, type: 3}
-  icon: {fileID: 21300000, guid: efa142fb23786b141ad172bfbbc87f11, type: 3}
+  icon: {fileID: 21300000, guid: ad3ee85f8f53c584ebed33d42607cf17, type: 3}
   objName: Cucumber
