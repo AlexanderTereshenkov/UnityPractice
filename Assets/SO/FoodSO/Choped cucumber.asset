@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a218eb940cc1f44ab2b6fa1a067dc20, type: 3}
   m_Name: Choped cucumber
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3662667031533261425, guid: 9e99e7b7e4f24e3488443ac47777af13, type: 3}
+  prefab: {fileID: 3559990232952020581, guid: 5ff6cf3244e0d0c4da6933bae0b752f3, type: 3}
   icon: {fileID: 21300000, guid: ad3ee85f8f53c584ebed33d42607cf17, type: 3}
-  objName: Choped cucumber

@@ -12,7 +12,6 @@ public class PickFood : MonoBehaviour, IPickable
         rigidBody = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player");
         inventory = player.GetComponent<Inventory>();
-        Debug.Log("Yes i work on new objects");
     }
 
     public void PutObjectIntoInventory(GameObject hand)

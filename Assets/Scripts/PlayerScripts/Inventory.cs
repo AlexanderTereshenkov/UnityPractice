@@ -65,7 +65,6 @@ public class Inventory : MonoBehaviour
                 if (objectsInInventory[slotPosition] != null) objectsInInventory[slotPosition].SetActive(true);
             }
         }
-
     }
 
     public bool[] GetIsSlotFull()
@@ -98,10 +97,12 @@ public class Inventory : MonoBehaviour
         slots[pos].gameObject.GetComponent<Image>().sprite = null;
         objectsInInventory[pos] = null;
         isSlotFull[pos] = false;
+        /*
         for(int i = 0; i < objectsInInventory.Length; i++)
         {
             Debug.Log(isSlotFull[i]);
         }
+        */
     }
 
     public int GetActiveSlot()

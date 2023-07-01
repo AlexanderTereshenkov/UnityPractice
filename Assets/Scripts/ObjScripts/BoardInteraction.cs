@@ -24,9 +24,8 @@ public class BoardInteraction : MonoBehaviour, IInteractible
             {
                 if (recipies[i].input == playerFoodObject.GetComponent<PickFood>().GetFoodTypeSO())
                 {
+                    Instantiate(recipies[i].output.prefab, boardFoodPlace.transform);
                     Destroy(playerFoodObject);
-                    playerFoodObject = recipies[i].output.prefab;
-                    Instantiate(playerFoodObject, boardFoodPlace.transform);
                     StopAction();
                 }
             }

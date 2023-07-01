@@ -3,13 +3,31 @@ using UnityEngine;
 public class FryingPanInteractive : MonoBehaviour, IInteractible
 {
     [SerializeField] private GameObject foodPlace;
-    private float fryingTime = 15f;
+    [SerializeField] private RecipeSO[] recipies;
+    private float fryingTime = 5f;
     private float countTime;
     private GameObject playerFoodObject;
     private bool isBoardFull;
     private bool isObjectBusy;
     public void SpawnFoodObject()
     {
+
+        GameObject cookedDish = null;
+        for (int i = 0; i < recipies.Length; i++)
+        {
+            if (playerFoodObject.GetComponent<PickFood>().GetFoodTypeSO() == recipies[i].input)
+            {
+
+                cookedDish = recipies[i].output.prefab;
+                Destroy(playerFoodObject);
+                playerFoodObject = Instantiate(cookedDish, foodPlace.transform);
+                playerFoodObject.GetComponent<PickFood>().SetCurrentInteractibleObject(this.gameObject);
+                playerFoodObject.transform.SetParent(foodPlace.transform);
+                playerFoodObject.transform.position = foodPlace.transform.position;
+                playerFoodObject.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            }
+        }
+        isObjectBusy = false;
 
     }
 
@@ -22,7 +40,6 @@ public class FryingPanInteractive : MonoBehaviour, IInteractible
             if(countTime >= fryingTime)
             {
                 SpawnFoodObject();
-                StopAction();
             }
         }
     }

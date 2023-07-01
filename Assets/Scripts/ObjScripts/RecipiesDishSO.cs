@@ -6,5 +6,6 @@ using UnityEngine;
 public class RecipiesDishSO : ScriptableObject
 {
     public List<FoodTypeSO> ingredients;
+    public GameObject readyDish;
 }
 

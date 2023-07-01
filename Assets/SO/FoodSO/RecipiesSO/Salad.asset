@@ -16,3 +16,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9f48cdd3e93747444b475e746de70823, type: 2}
   - {fileID: 11400000, guid: 5a7c3fd1aa275374e96139a4c5b82b95, type: 2}
   - {fileID: 11400000, guid: 0951e47329c41fe45b1687eb58d8e878, type: 2}
+  readyDish: {fileID: 2244545139794951248, guid: 4c6132de10b9c8542bcf579e893fcc90, type: 3}
