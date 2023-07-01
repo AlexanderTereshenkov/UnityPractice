@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objSprite: {fileID: 21300000, guid: f81de4614a7c83d47a058c4bed24c196, type: 3}
-  objectTypeSO: {fileID: 11400000, guid: 27c2c04ab1c098c42967864de802e768, type: 2}
+  objectName: Knife
 --- !u!1001 &6551801231465471773
 PrefabInstance:
   m_ObjectHideFlags: 0

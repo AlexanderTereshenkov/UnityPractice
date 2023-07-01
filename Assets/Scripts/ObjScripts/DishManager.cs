@@ -9,17 +9,36 @@ public class DishManager : MonoBehaviour
     [SerializeField] private GameObject readyDish;
 
     private List<GameObject> ingridiens = new List<GameObject>();
+    private RecipiesDishSO[] gameManagerDish;
+
+    private void Start()
+    {
+        gameManagerDish = GameObject.FindWithTag("GameController").GetComponent<GameManager>().GetRecipiesDishes();
+    }
 
     public void PutFoodInPlate(GameObject playerObject)
     {
         playerObject.transform.SetParent(foodPlace);
         playerObject.SetActive(false);
         ingridiens.Add(playerObject);
-        if(ingridiens.Count == 3)
+        for (int i = 0; i < gameManagerDish.Length; i++)
         {
-            var readyPlate = Instantiate(readyDish, plateSpawn.transform);
-            readyPlate.transform.SetParent(null);
-            Destroy(this.gameObject);
+            bool isDishRight = true;
+            if(ingridiens.Count == gameManagerDish[i].ingredients.Count)
+            {
+                for (int j = 0; j < gameManagerDish[i].ingredients.Count; j++)
+                {
+                    if (!gameManagerDish[i].ingredients.Contains(ingridiens[j].GetComponent<PickFood>().GetFoodTypeSO()))
+                    {
+                        isDishRight = false;
+                    }
+                }
+                if (isDishRight)
+                {
+                    Debug.Log("You made ficking salad");
+                }
+            }
+
         }
     }
 }

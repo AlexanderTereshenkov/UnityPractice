@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickObject : MonoBehaviour, IPickable
 {
     [SerializeField] private Sprite objSprite;
-    [SerializeField] private ObjectTypeSO objectTypeSO;
+    [SerializeField] private string objectName;
     private Rigidbody rigidBody;
     private GameObject player;
     private Inventory inventory;
@@ -70,8 +70,8 @@ public class PickObject : MonoBehaviour, IPickable
         return objSprite;
     }
 
-    public ObjectTypeSO GetObjectTypeSO()
+    public string GetObjectName()
     {
-        return objectTypeSO;
+        return objectName;
     }
 }

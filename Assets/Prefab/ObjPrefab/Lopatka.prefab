@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objSprite: {fileID: 21300000, guid: 67f53b5353279344da44c9a16fb4f665, type: 3}
-  objectTypeSO: {fileID: 11400000, guid: 4a58eb929cb47a640a68bf538b0f2c63, type: 2}
+  objectName: Lopatka
 --- !u!1001 &6458835153672494979
 PrefabInstance:
   m_ObjectHideFlags: 0

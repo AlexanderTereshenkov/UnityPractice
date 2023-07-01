@@ -123,13 +123,11 @@ public class PlayerController : MonoBehaviour
                     {
                         if (hit.transform.GetComponent<IInteractible>() != null && hit.transform.GetComponent<IInteractible>().IsObjectFull())
                         {
-                            hit.transform.GetComponent<IInteractible>().MakeAction("Knife");
-                            //inventory.GetAllObjects()[inventory.GetActiveSlot()].GetComponent<PickObject>().GetObjectTypeSO().objName
+                            hit.transform.GetComponent<IInteractible>().MakeAction(inventory.GetAllObjects()[inventory.GetActiveSlot()].GetComponent<PickObject>().GetObjectName());
                         }
                     }
                     if(inventory.GetAllObjects()[inventory.GetActiveSlot()].GetComponent<PickFood>() != null)
                     {
-                        Debug.Log("I AM FUCKING FOOD");
                         if(hit.transform.GetComponent<DishManager>() != null)
                         {
                             inventory.GetAllObjects()[inventory.GetActiveSlot()].transform.SetParent(null);
