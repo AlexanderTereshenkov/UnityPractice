@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a218eb940cc1f44ab2b6fa1a067dc20, type: 3}
   m_Name: Raw_pasta
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
-  icon: {fileID: 0}
+  prefab: {fileID: 3083241503397636662, guid: c0d8cf7bfdd80b94d8a569203410fbb4, type: 3}
+  icon: {fileID: 21300000, guid: 3ac832d23c4015a4c86dd71425037288, type: 3}

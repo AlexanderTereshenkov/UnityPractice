@@ -73,6 +73,8 @@
     <Compile Include="Assets\Scripts\ObjScripts\FoodTypeSO.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\ObjScripts\PickPlate.cs" />
+    <Compile Include="Assets\Scripts\ObjScripts\TrashCan.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\ObjScripts\BoardInteraction.cs" />
   </ItemGroup>
