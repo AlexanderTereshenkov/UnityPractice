@@ -7,4 +7,6 @@ public interface IInteractible
     void MakeAction(string objName);
     bool IsObjectBusy();
     bool IsObjectFull();
+
+    bool IsPossibleToInteract(GameObject gameObject);
 }

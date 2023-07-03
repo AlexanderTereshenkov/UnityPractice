@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f0f819186d1d62d42b7c33d347cf0db3, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0f819186d1d62d42b7c33d347cf0db3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -50,6 +50,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0f819186d1d62d42b7c33d347cf0db3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2577548232221058511, guid: f0f819186d1d62d42b7c33d347cf0db3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -2577548232221058511, guid: f0f819186d1d62d42b7c33d347cf0db3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -2577548232221058511, guid: f0f819186d1d62d42b7c33d347cf0db3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2577548232221058511, guid: f0f819186d1d62d42b7c33d347cf0db3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2577548232221058511, guid: f0f819186d1d62d42b7c33d347cf0db3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -2577548232221058511, guid: f0f819186d1d62d42b7c33d347cf0db3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f0f819186d1d62d42b7c33d347cf0db3, type: 3}
@@ -118,3 +142,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodTypeSO: {fileID: 11400000, guid: 3481b5f42831bde4fb0bc213ca0a2546, type: 2}
+  foodCollider: {fileID: 7721368461025070668}
+--- !u!64 &7721368461025070668 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 3182244660871480619, guid: f0f819186d1d62d42b7c33d347cf0db3, type: 3}
+  m_PrefabInstance: {fileID: 5120123405331139431}
+  m_PrefabAsset: {fileID: 0}

@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 5fa278d4ad4b2474aab5ef3e08da0490, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5fa278d4ad4b2474aab5ef3e08da0490, type: 3}
       propertyPath: m_LocalPosition.x
@@ -71,6 +71,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2566828517637987372}
   m_SourcePrefab: {fileID: 100100000, guid: 5fa278d4ad4b2474aab5ef3e08da0490, type: 3}
+--- !u!64 &2238850433383083981 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 2699092741681021261, guid: 5fa278d4ad4b2474aab5ef3e08da0490, type: 3}
+  m_PrefabInstance: {fileID: 4207738739855502976}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3937709334048379857 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5fa278d4ad4b2474aab5ef3e08da0490, type: 3}
@@ -116,3 +121,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodTypeSO: {fileID: 11400000, guid: 9f48cdd3e93747444b475e746de70823, type: 2}
+  foodCollider: {fileID: 2238850433383083981}

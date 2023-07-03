@@ -32,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 4271706602883879436}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1087924856847290585
 Rigidbody:
@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodTypeSO: {fileID: 11400000, guid: 0951e47329c41fe45b1687eb58d8e878, type: 2}
+  foodCollider: {fileID: 1379871936295060463}
 --- !u!1001 &4378237678062728679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -139,6 +140,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47f31fd40877c9a4e818f2b3049e8417, type: 3}
+--- !u!64 &1379871936295060463 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 3451118302482216456, guid: 47f31fd40877c9a4e818f2b3049e8417, type: 3}
+  m_PrefabInstance: {fileID: 4378237678062728679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4271706602883879436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 47f31fd40877c9a4e818f2b3049e8417, type: 3}

@@ -100,9 +100,9 @@ public class PlayerController : MonoBehaviour
                 {
                     hit.transform.GetComponent<FridjeInteraction>().StartAction();
                 }
-                if(hit.transform.GetComponent<PickPlate>() != null)
+                if(hit.transform.TryGetComponent<PickPlate>(out PickPlate plate))
                 {
-                    hit.transform.GetComponent<PickPlate>().GetPlate();
+                    plate.GetPlate();
                      //Возможно стоит сделать одну бесконечную тарелку, которая будет заменяться, когда игрок забирает одну тарелку
                      /*
                     if (inventory.GetIsSlotFull()[inventory.GetActiveSlot()] == false)
@@ -124,9 +124,12 @@ public class PlayerController : MonoBehaviour
                     GameObject currentObject = inventory.GetAllObjects()[inventory.GetActiveSlot()];
                     if (currentObject != null && currentObject.GetComponent<PickFood>() != null)
                     {
-                        currentObject.transform.SetParent(null);
-                        hit.transform.GetComponent<IInteractible>().StartAction(currentObject);
-                        inventory.RemoveFromInventory(inventory.GetActiveSlot());
+                        if (hit.transform.GetComponent<IInteractible>().IsPossibleToInteract(currentObject))
+                        {
+                            currentObject.transform.SetParent(null);
+                            hit.transform.GetComponent<IInteractible>().StartAction(currentObject);
+                            inventory.RemoveFromInventory(inventory.GetActiveSlot());
+                        }
                     }
                 }
                 if(inventory.GetAllObjects()[inventory.GetActiveSlot()] != null)

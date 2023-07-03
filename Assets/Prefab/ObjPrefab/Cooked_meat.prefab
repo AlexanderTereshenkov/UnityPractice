@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3123111852465513419}
-  - component: {fileID: 5837405714025489271}
   - component: {fileID: 6840187840990389318}
   - component: {fileID: 4585399525023432252}
   m_Layer: 0
@@ -27,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4100939572321255631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.6973886, y: 1.171, z: -0.5192799}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -35,27 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5837405714025489271
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4100939572321255631}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 0.26755816, y: 0.063537985, z: 0.41759288}
-  m_Center: {x: -0.0015203357, y: -0.0002674032, z: 0.03748247}
 --- !u!54 &6840187840990389318
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -96,6 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodTypeSO: {fileID: 11400000, guid: a0da7c9cd9ff0444aa673587289bf74f, type: 2}
+  foodCollider: {fileID: 8061985329663147477}
 --- !u!1001 &4613156335514962909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -172,5 +151,10 @@ PrefabInstance:
 --- !u!4 &5156481126315535414 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d26cbac6addd0ad48b70c79dbef54757, type: 3}
+  m_PrefabInstance: {fileID: 4613156335514962909}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &8061985329663147477 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 3451118302482216456, guid: d26cbac6addd0ad48b70c79dbef54757, type: 3}
   m_PrefabInstance: {fileID: 4613156335514962909}
   m_PrefabAsset: {fileID: 0}

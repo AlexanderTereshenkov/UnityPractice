@@ -3,6 +3,7 @@ using UnityEngine;
 public class PickFood : MonoBehaviour, IPickable
 {
     [SerializeField] private FoodTypeSO foodTypeSO;
+    [SerializeField] private Collider foodCollider;
     private Rigidbody rigidBody;
     private GameObject player;
     private GameObject currentInteracttibleObject;
@@ -81,5 +82,10 @@ public class PickFood : MonoBehaviour, IPickable
     public GameObject GetCurrentInteractibleObject()
     {
         return currentInteracttibleObject;
+    }
+
+    public Collider GetObjectCollider()
+    {
+        return foodCollider;
     }
 }

@@ -59,4 +59,9 @@ public class BoardInteraction : MonoBehaviour, IInteractible
         return isBoardFull;
     }
 
+    public bool IsPossibleToInteract(GameObject gameObject)
+    {
+        return true;
+    }
+
 }

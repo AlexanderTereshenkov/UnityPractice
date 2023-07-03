@@ -19,7 +19,11 @@ public class DishManager : MonoBehaviour
     public void PutFoodInPlate(GameObject playerObject)
     {
         playerObject.transform.SetParent(foodPlace);
-        playerObject.SetActive(false);
+        playerObject.transform.position = foodPlace.transform.position;
+        playerObject.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        playerObject.GetComponent<PickFood>().GetObjectCollider().enabled = false;
+        playerObject.GetComponent<Rigidbody>().isKinematic = true;
+        playerObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         currentIngrediens.Add(playerObject);
         for (int i = 0; i < recipiesBook.Length; i++)
         {

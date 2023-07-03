@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: facc937764f682f41a0932799ee621dd, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: facc937764f682f41a0932799ee621dd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodTypeSO: {fileID: 11400000, guid: a3eb27e543c65de479dc4e14581947cb, type: 2}
+  foodCollider: {fileID: 8476617616461970859}
 --- !u!54 &4550913892033881910
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -116,3 +117,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!64 &8476617616461970859 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 2699092741681021261, guid: facc937764f682f41a0932799ee621dd, type: 3}
+  m_PrefabInstance: {fileID: 5825375623563132134}
+  m_PrefabAsset: {fileID: 0}
