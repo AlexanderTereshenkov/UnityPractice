@@ -103,14 +103,10 @@ public class PlayerController : MonoBehaviour
                 if(hit.transform.TryGetComponent<PickPlate>(out PickPlate plate))
                 {
                     plate.GetPlate();
-                     //Возможно стоит сделать одну бесконечную тарелку, которая будет заменяться, когда игрок забирает одну тарелку
-                     /*
-                    if (inventory.GetIsSlotFull()[inventory.GetActiveSlot()] == false)
-                    {
-                        newPlate.GetComponent<IPickable>().PutObjectIntoHand(handPos);
-                    }
-                    newPlate.GetComponent<IPickable>().PutObjectIntoInventory(handPos);
-                     */
+                }
+                if(hit.transform.TryGetComponent<GiveOrder>(out GiveOrder giveOrder))
+                {
+                    giveOrder.GiveOrderToPlayer(Time.time);
                 }
             }
         }

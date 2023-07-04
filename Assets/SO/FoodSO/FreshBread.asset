@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a218eb940cc1f44ab2b6fa1a067dc20, type: 3}
   m_Name: FreshBread
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4818779931913785410, guid: 8cff6f7d4aa557046b2baa29b3a59b48, type: 3}
+  prefab: {fileID: 3685206814972247897, guid: 9a28833d874977a41a80d4f3327ebc83, type: 3}
   icon: {fileID: 21300000, guid: 84db62e9ec3167b4cba561d856f07198, type: 3}
