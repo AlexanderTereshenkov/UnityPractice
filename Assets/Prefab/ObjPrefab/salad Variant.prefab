@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: salad Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a43b4fd4f7806294da1136a65198d7d3, type: 3}
+      propertyPath: m_TagString
+      value: Ready dish
+      objectReference: {fileID: 0}
     - target: {fileID: 3182244660871480619, guid: a43b4fd4f7806294da1136a65198d7d3, type: 3}
       propertyPath: m_Convex
       value: 1

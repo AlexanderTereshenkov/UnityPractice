@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject playerCamera;
     [SerializeField] private Camera cam;
     [SerializeField] private GameObject handPos;
-    [SerializeField] private LayerMask ignoreLayer;
+    [SerializeField] private LayerMask interactibleLayer;
 
     private CharacterController characterController;
     private Vector3 moveDirection;
@@ -113,8 +113,58 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, maxRayDistance, ignoreLayer))
+            if (Physics.Raycast(ray, out hit, maxRayDistance, interactibleLayer))
             {
+                if (inventory.GetAllObjects()[inventory.GetActiveSlot()] != null)
+                {
+                    if (inventory.GetAllObjects()[inventory.GetActiveSlot()].TryGetComponent<PickFood>(out PickFood pickFood))
+                    {
+                        GameObject currnetGameObject = inventory.GetAllObjects()[inventory.GetActiveSlot()];
+                        if (hit.transform.TryGetComponent<IInteractible>(out IInteractible interactible))
+                        {
+                            if (!interactible.IsObjectFull() && interactible.IsPossibleToInteract(currnetGameObject))
+                            {
+                                currnetGameObject.transform.SetParent(null);
+                                interactible.StartAction(currnetGameObject);
+                                inventory.RemoveFromInventory(inventory.GetActiveSlot());
+                            }
+                        }
+                        if (hit.transform.TryGetComponent<DishManager>(out DishManager dishManager))
+                        {
+                            inventory.GetAllObjects()[inventory.GetActiveSlot()].transform.SetParent(null);
+                            dishManager.PutFoodInPlate(currnetGameObject);
+                            inventory.RemoveFromInventory(inventory.GetActiveSlot());
+                        }
+                        if (hit.transform.TryGetComponent<TrashCan>(out TrashCan trashCan))
+                        {
+                            trashCan.DestroyGameObject(currnetGameObject);
+                        }
+                    }
+                    else if (inventory.GetAllObjects()[inventory.GetActiveSlot()].TryGetComponent<PickObject>(out PickObject pickObject))
+                    {
+                        GameObject currnetGameObject = inventory.GetAllObjects()[inventory.GetActiveSlot()];
+                        if (hit.transform.TryGetComponent<IInteractible>(out IInteractible interactible))
+                        {
+                            if (interactible.IsObjectFull())
+                            {
+                                interactible.MakeAction(pickObject.name);
+                            }
+                        }
+                        if (hit.transform.TryGetComponent<TrashCan>(out TrashCan trashCan))
+                        {
+                            trashCan.DestroyGameObject(currnetGameObject);
+                        }
+                    }
+                    else if (inventory.GetAllObjects()[inventory.GetActiveSlot()].TryGetComponent<Order>(out Order order))
+                    {
+                        Debug.Log("DAAAAAM AAAAAAAAAAAA");
+                        if(hit.transform.CompareTag("Ready dish"))
+                        {
+                            Debug.Log("HELOOOOOOO FUCK ITTTT");
+                        }
+                    }
+                }
+                /*
                 if(hit.transform.GetComponent<IInteractible>() != null && !hit.transform.GetComponent<IInteractible>().IsObjectFull())
                 {
                     GameObject currentObject = inventory.GetAllObjects()[inventory.GetActiveSlot()];
@@ -137,15 +187,24 @@ public class PlayerController : MonoBehaviour
                             hit.transform.GetComponent<IInteractible>().MakeAction(inventory.GetAllObjects()[inventory.GetActiveSlot()].GetComponent<PickObject>().GetObjectName());
                         }
                     }
-                    if(inventory.GetAllObjects()[inventory.GetActiveSlot()].GetComponent<PickFood>() != null)
+                    if(hit.transform.TryGetComponent<DishManager>(out DishManager dishManager))
                     {
-                        if(hit.transform.GetComponent<DishManager>() != null)
+                        if(inventory.GetAllObjects()[inventory.GetActiveSlot()].GetComponent<PickFood>() != null)
                         {
                             inventory.GetAllObjects()[inventory.GetActiveSlot()].transform.SetParent(null);
-                            hit.transform.GetComponent<DishManager>().PutFoodInPlate(inventory.GetAllObjects()[inventory.GetActiveSlot()]);
+                            dishManager.PutFoodInPlate(inventory.GetAllObjects()[inventory.GetActiveSlot()]);
                             inventory.RemoveFromInventory(inventory.GetActiveSlot());
                         }
-
+                    }
+                    if(hit.transform.TryGetComponent<PickObject>(out PickObject pickObject))
+                    {
+                        if(pickObject.GetObjectName() != "Knife" && pickObject.GetObjectName() != "Lopatka")
+                        {
+                            if(inventory.GetAllObjects()[inventory.GetActiveSlot()].TryGetComponent<Order>(out Order order))
+                            {
+                                Debug.Log(order.GetCurrentRecipie());
+                            }
+                        }
                     }
                     if (hit.transform.GetComponent<TrashCan>() != null)
                     {
@@ -153,6 +212,7 @@ public class PlayerController : MonoBehaviour
                     }
 
                 }
+                */
             }
         }
         if (Input.GetKeyDown(KeyCode.G) && inventory.GetIsSlotFull()[inventory.GetActiveSlot()] != false)

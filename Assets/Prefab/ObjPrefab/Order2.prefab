@@ -115,8 +115,8 @@ GameObject:
   m_Component:
   - component: {fileID: 538706138695962824}
   - component: {fileID: 8199637225536122106}
-  - component: {fileID: 1254441691742334851}
   - component: {fileID: 7215488644771594857}
+  - component: {fileID: 1254441691742334851}
   m_Layer: 0
   m_Name: Order2
   m_TagString: Untagged
@@ -166,7 +166,19 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
+--- !u!114 &7215488644771594857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4123497088723734993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 357dd9641d11bca4db2cc62f7a537f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1254441691742334851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,15 +193,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objSprite: {fileID: 21300000, guid: dae0e7df175e24b4e80d1aad411ba3fb, type: 3}
   objectName: Order
---- !u!114 &7215488644771594857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4123497088723734993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 357dd9641d11bca4db2cc62f7a537f0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

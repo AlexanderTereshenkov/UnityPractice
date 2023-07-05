@@ -18,9 +18,19 @@ public class Inventory : MonoBehaviour
         objectsInInventory = new GameObject[slots.Length];
     }
 
-    private void Update() { 
+    private void Update() {
+        /*
+        var scroll = Input.GetAxisRaw("Mouse ScrollWheel");
+        if(scroll == 0)
+        {
+            return;
+        }
+        slotPosition += scroll > 0 ? 1 : -1;
+        slotPosition %= slots.Length;
+        Debug.Log(slotPosition);
+        */
 
-        if(Input.GetAxisRaw("Mouse ScrollWheel") > 0 && player.GetComponent<PlayerController>().GetIsMovingPossible())
+        if (Input.GetAxisRaw("Mouse ScrollWheel") > 0 && player.GetComponent<PlayerController>().GetIsMovingPossible())
         {
             if(slotPosition+1 < slots.Length)
             {

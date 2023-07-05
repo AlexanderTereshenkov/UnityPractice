@@ -54,7 +54,6 @@ public class FryingPanInteractive : MonoBehaviour, IInteractible
             {
                 progressBar.color = uncookedPBColor;
             }
-            Debug.Log(countTime);
             if(countTime >= fryingTime)
             {
                 SpawnFoodObject();

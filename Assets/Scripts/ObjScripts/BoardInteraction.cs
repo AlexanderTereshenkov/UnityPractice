@@ -27,6 +27,7 @@ public class BoardInteraction : MonoBehaviour, IInteractible
                     Instantiate(recipies[i].output.prefab, boardFoodPlace.transform);
                     Destroy(playerFoodObject);
                     StopAction();
+                    break;
                 }
             }
         }
