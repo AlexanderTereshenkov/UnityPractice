@@ -138,6 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objSprite: {fileID: 21300000, guid: fb7ee52e77ecc974195149830db280ee, type: 3}
   objectName: "\u0421\u0430\u043B\u0430\u0442"
+<<<<<<< HEAD
 --- !u!114 &5759433279256144179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,3 +152,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priceForDish: 70
+=======
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439

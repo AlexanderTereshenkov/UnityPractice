@@ -20,7 +20,10 @@ public class PlayerController : MonoBehaviour
     private bool isMovingPossible;
     private Inventory inventory;
     private GameManager gameManager;
+<<<<<<< HEAD
     private MoneyManager moneyManager;
+=======
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
 
     private void Start()
     {
@@ -30,7 +33,10 @@ public class PlayerController : MonoBehaviour
         inventory = GetComponent<Inventory>();
         isMovingPossible = true;
         gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
+<<<<<<< HEAD
         moneyManager = GetComponent<MoneyManager>();
+=======
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
     }
 
 
@@ -160,7 +166,10 @@ public class PlayerController : MonoBehaviour
                         {
                             if(hit.transform.CompareTag("Ready dish") && hit.transform.GetComponent<PickObject>().GetObjectName() == order.GetCurrentRecipie())
                             {
+<<<<<<< HEAD
                                 moneyManager.ChangeMoneyValue(hit.transform.GetComponent<ReadyDishManager>().GetPrice());
+=======
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
                                 Destroy(hit.transform.gameObject);
                                 currnetGameObject.transform.SetParent(null);
                                 inventory.RemoveFromInventory(inventory.GetActiveSlot());

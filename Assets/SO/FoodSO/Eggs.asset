@@ -9,9 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<<< HEAD:Assets/SO/FoodSO/Eggs.asset
   m_Script: {fileID: 11500000, guid: 2a218eb940cc1f44ab2b6fa1a067dc20, type: 3}
   m_Name: Eggs
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   icon: {fileID: 0}
   price: 15
+========
+  m_Script: {fileID: 11500000, guid: c3a7bb546aaf20c48bc483c9700dd7cd, type: 3}
+  m_Name: Pasta-cooked pasta
+  m_EditorClassIdentifier: 
+  input: {fileID: 11400000, guid: ea01beb3fb8bda84dbb45c36ebafa644, type: 2}
+  output: {fileID: 11400000, guid: ee4f00769a972a74f8055cb4818c9ff4, type: 2}
+>>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439:Assets/SO/FoodSO/RecipiesSO/Pasta-cooked pasta.asset

@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427176, b: 0.56452405, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.44512564, g: 0.49473077, b: 0.57380426, a: 1}
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -962,10 +966,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 716037816}
+<<<<<<< HEAD
     - target: {fileID: 2129278044701568064, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 5
       objectReference: {fileID: 0}
+=======
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
     - target: {fileID: 4381963077986839611, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1058,10 +1065,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 8830980451846103381, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
       propertyPath: m_text
       value: 7
       objectReference: {fileID: 0}
+=======
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1287,6 +1297,7 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 716037816}
+<<<<<<< HEAD
     - target: {fileID: 2129278044701568064, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 6
@@ -1295,6 +1306,12 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 88f54b6c3f48f954a9c33e75be2b3fd6, type: 3}
+=======
+    - target: {fileID: 4381963077986839611, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2d99a245e1bb25942b8e2bb18a2e75a8, type: 3}
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
     - target: {fileID: 7339976077975826228, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
       propertyPath: m_Name
       value: ProductButton (6)
@@ -1383,10 +1400,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 8830980451846103381, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
       propertyPath: m_text
       value: 15
       objectReference: {fileID: 0}
+=======
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4482,7 +4502,11 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
+<<<<<<< HEAD
   m_Color: {r: 1, g: 0.9972781, b: 0.83396226, a: 1}
+=======
+  m_Color: {r: 1, g: 0.99427223, b: 0.759434, a: 1}
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
   m_Intensity: 11
   m_Range: 13.083965
   m_SpotAngle: 113.87845
@@ -4657,7 +4681,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 90, y: -1.432, z: 19.52}
+=======
+  m_LocalEulerAnglesHint: {x: 54.081, y: -1.432, z: 19.52}
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
 --- !u!1 &710130385
 GameObject:
   m_ObjectHideFlags: 0
@@ -5366,10 +5394,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 716037816}
+<<<<<<< HEAD
     - target: {fileID: 2129278044701568064, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 3
       objectReference: {fileID: 0}
+=======
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
     - target: {fileID: 4381963077986839611, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -5462,10 +5493,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 8830980451846103381, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
       propertyPath: m_text
       value: 70
       objectReference: {fileID: 0}
+=======
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6950,10 +6984,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 716037816}
+<<<<<<< HEAD
     - target: {fileID: 2129278044701568064, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 4
       objectReference: {fileID: 0}
+=======
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
     - target: {fileID: 4381963077986839611, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -7046,10 +7083,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 8830980451846103381, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
       propertyPath: m_text
       value: 35
       objectReference: {fileID: 0}
+=======
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7067,7 +7107,11 @@ GameObject:
   m_Layer: 0
   m_Name: PlateSpawn
   m_TagString: Untagged
+<<<<<<< HEAD
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+=======
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -7638,7 +7682,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: pb_Mesh24558
+=======
+  m_Name: pb_Mesh23906
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -7813,10 +7861,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 716037816}
+<<<<<<< HEAD
     - target: {fileID: 2129278044701568064, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 1
       objectReference: {fileID: 0}
+=======
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
     - target: {fileID: 4381963077986839611, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -7909,10 +7960,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 8830980451846103381, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
       propertyPath: m_text
       value: 10
       objectReference: {fileID: 0}
+=======
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9941,7 +9995,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: pb_Mesh24752
+=======
+  m_Name: pb_Mesh24096
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -10691,7 +10749,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: pb_Mesh24906
+=======
+  m_Name: pb_Mesh24282
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -11001,10 +11063,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 716037816}
+<<<<<<< HEAD
     - target: {fileID: 2129278044701568064, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 2
       objectReference: {fileID: 0}
+=======
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
     - target: {fileID: 4381963077986839611, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -11097,10 +11162,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 8830980451846103381, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
       propertyPath: m_text
       value: 20
       objectReference: {fileID: 0}
+=======
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11300,10 +11368,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 8830980451846103381, guid: 296ffca2f133b6643b5517735f28144d, type: 3}
       propertyPath: m_text
       value: 25
       objectReference: {fileID: 0}
+=======
+>>>>>>> 966b6339140bef42075a9b1dcceaf8d52d6c1439
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
