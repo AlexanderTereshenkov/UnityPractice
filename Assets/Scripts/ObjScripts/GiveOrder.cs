@@ -5,12 +5,13 @@ public class GiveOrder : MonoBehaviour
     private float previousTime = 0;
     private float orderCoolDown = 3;
     private RecipiesDishSO[] recipiesBook;
-    [SerializeField] private GameObject saladPrefab;
-    [SerializeField] private GameObject pastaPrefab;
+    private GameManager gameManager;
+    [SerializeField] private GameObject checkPrefab;
     [SerializeField] private Transform orderPlace;
     private void Start()
     {
-        recipiesBook = GameObject.FindWithTag("GameController").GetComponent<GameManager>().GetRecipiesDishes();
+        gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
+        recipiesBook = gameManager.GetRecipiesDishes();
     }
 
     public void GiveOrderToPlayer(float time)
@@ -18,16 +19,9 @@ public class GiveOrder : MonoBehaviour
         if(time - previousTime >= orderCoolDown)
         {
             string currentOrder = recipiesBook[Random.Range(0, recipiesBook.Length)].readyDish.GetComponent<PickObject>().GetObjectName();
-            if (currentOrder == "Pasta")
-            {
-                GameObject currObj = Instantiate(pastaPrefab, orderPlace);
-                currObj.GetComponent<Order>().SetCurrentRecipie(currentOrder);
-            }
-            else
-            {
-                GameObject currObj = Instantiate(saladPrefab, orderPlace);
-                currObj.GetComponent<Order>().SetCurrentRecipie(currentOrder);
-            }
+            var check = Instantiate(checkPrefab, orderPlace);
+            check.GetComponent<Order>().SetCurrentRecipie(currentOrder);
+            gameManager.SetActiveCheques(1);
             previousTime = time;
         }
     }

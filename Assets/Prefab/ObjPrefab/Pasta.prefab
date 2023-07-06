@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21ea55e5ba104f45bf1ef01a940ecbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodTypeSO: {fileID: 11400000, guid: 78f899e35da5e3a41ab11a42d5c7c782, type: 2}
+  foodTypeSO: {fileID: 11400000, guid: ea01beb3fb8bda84dbb45c36ebafa644, type: 2}
   foodCollider: {fileID: 8528939728868219020}
 --- !u!1001 &6464975201794076292
 PrefabInstance:
