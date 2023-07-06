@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1083917005460176726, guid: 347c7325743e60d44a43c9f8c5595e3d, type: 3}
   icon: {fileID: 21300000, guid: 859c2dea5e541d345b11b71be054d0f1, type: 3}
-  objName: Meat
+  price: 50

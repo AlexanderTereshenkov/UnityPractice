@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Pasta with meat
   m_EditorClassIdentifier: 
   ingredients:
-  - {fileID: 11400000, guid: 78f899e35da5e3a41ab11a42d5c7c782, type: 2}
+  - {fileID: 11400000, guid: ee4f00769a972a74f8055cb4818c9ff4, type: 2}
   - {fileID: 11400000, guid: a0da7c9cd9ff0444aa673587289bf74f, type: 2}
   readyDish: {fileID: 3559438732446614129, guid: 06125d58338d0c143aa30aa7f02e21a1, type: 3}

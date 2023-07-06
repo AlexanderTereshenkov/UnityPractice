@@ -19,7 +19,8 @@ public class PlayerController : MonoBehaviour
     private float maxRayDistance = 2f;
     private bool isMovingPossible;
     private Inventory inventory;
-    private PlayerUI playerUI;
+    private GameManager gameManager;
+    private MoneyManager moneyManager;
 
     private void Start()
     {
@@ -27,8 +28,9 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         inventory = GetComponent<Inventory>();
-        playerUI = GetComponent<PlayerUI>();
         isMovingPossible = true;
+        gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
+        moneyManager = GetComponent<MoneyManager>();
     }
 
 
@@ -154,65 +156,20 @@ public class PlayerController : MonoBehaviour
                         {
                             trashCan.DestroyGameObject(currnetGameObject);
                         }
-                    }
-                    else if (inventory.GetAllObjects()[inventory.GetActiveSlot()].TryGetComponent<Order>(out Order order))
-                    {
-                        Debug.Log("DAAAAAM AAAAAAAAAAAA");
-                        if(hit.transform.CompareTag("Ready dish"))
+                        if(currnetGameObject.TryGetComponent<Order>(out Order order))
                         {
-                            Debug.Log("HELOOOOOOO FUCK ITTTT");
-                        }
-                    }
-                }
-                /*
-                if(hit.transform.GetComponent<IInteractible>() != null && !hit.transform.GetComponent<IInteractible>().IsObjectFull())
-                {
-                    GameObject currentObject = inventory.GetAllObjects()[inventory.GetActiveSlot()];
-                    if (currentObject != null && currentObject.GetComponent<PickFood>() != null)
-                    {
-                        if (hit.transform.GetComponent<IInteractible>().IsPossibleToInteract(currentObject))
-                        {
-                            currentObject.transform.SetParent(null);
-                            hit.transform.GetComponent<IInteractible>().StartAction(currentObject);
-                            inventory.RemoveFromInventory(inventory.GetActiveSlot());
-                        }
-                    }
-                }
-                if(inventory.GetAllObjects()[inventory.GetActiveSlot()] != null)
-                {
-                    if (inventory.GetAllObjects()[inventory.GetActiveSlot()].GetComponent<PickObject>() != null)
-                    {
-                        if (hit.transform.GetComponent<IInteractible>() != null && hit.transform.GetComponent<IInteractible>().IsObjectFull())
-                        {
-                            hit.transform.GetComponent<IInteractible>().MakeAction(inventory.GetAllObjects()[inventory.GetActiveSlot()].GetComponent<PickObject>().GetObjectName());
-                        }
-                    }
-                    if(hit.transform.TryGetComponent<DishManager>(out DishManager dishManager))
-                    {
-                        if(inventory.GetAllObjects()[inventory.GetActiveSlot()].GetComponent<PickFood>() != null)
-                        {
-                            inventory.GetAllObjects()[inventory.GetActiveSlot()].transform.SetParent(null);
-                            dishManager.PutFoodInPlate(inventory.GetAllObjects()[inventory.GetActiveSlot()]);
-                            inventory.RemoveFromInventory(inventory.GetActiveSlot());
-                        }
-                    }
-                    if(hit.transform.TryGetComponent<PickObject>(out PickObject pickObject))
-                    {
-                        if(pickObject.GetObjectName() != "Knife" && pickObject.GetObjectName() != "Lopatka")
-                        {
-                            if(inventory.GetAllObjects()[inventory.GetActiveSlot()].TryGetComponent<Order>(out Order order))
+                            if(hit.transform.CompareTag("Ready dish") && hit.transform.GetComponent<PickObject>().GetObjectName() == order.GetCurrentRecipie())
                             {
-                                Debug.Log(order.GetCurrentRecipie());
+                                moneyManager.ChangeMoneyValue(hit.transform.GetComponent<ReadyDishManager>().GetPrice());
+                                Destroy(hit.transform.gameObject);
+                                currnetGameObject.transform.SetParent(null);
+                                inventory.RemoveFromInventory(inventory.GetActiveSlot());
+                                Destroy(currnetGameObject);
+                                gameManager.SetActiveCheques(-1);
                             }
                         }
                     }
-                    if (hit.transform.GetComponent<TrashCan>() != null)
-                    {
-                        hit.transform.GetComponent<TrashCan>().DestroyGameObject(inventory.GetAllObjects()[inventory.GetActiveSlot()]);
-                    }
-
                 }
-                */
             }
         }
         if (Input.GetKeyDown(KeyCode.G) && inventory.GetIsSlotFull()[inventory.GetActiveSlot()] != false)

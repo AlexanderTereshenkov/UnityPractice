@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6635646759479411127, guid: d35ef1cb9f0351143900f013bf36e46c, type: 3}
   icon: {fileID: 21300000, guid: 6c3e957b52702e54983472698fa55756, type: 3}
-  objName: Tomato
+  price: 25

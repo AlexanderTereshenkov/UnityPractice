@@ -102,6 +102,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7027fcf2e84e6d449ab2c28ea8c6ddc3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8620339419564771515}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7027fcf2e84e6d449ab2c28ea8c6ddc3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2509530943656463472}
   m_SourcePrefab: {fileID: 100100000, guid: 7027fcf2e84e6d449ab2c28ea8c6ddc3, type: 3}
 --- !u!1 &3559438732446614129 stripped
 GameObject:
@@ -169,4 +172,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objSprite: {fileID: 21300000, guid: 3ac832d23c4015a4c86dd71425037288, type: 3}
-  objectName: Pasta
+  objectName: "\u041C\u0430\u043A\u0430\u0440\u043E\u043D\u044B \u0441 \u043C\u044F\u0441\u043E\u043C"
+--- !u!114 &2509530943656463472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3559438732446614129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 917d991e0095e3644856647e81f4db9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priceForDish: 95
