@@ -5,33 +5,39 @@ using UnityEngine;
 public class TrashCan : MonoBehaviour
 {
     private Inventory inventory;
+    private MoneyManager moneyManager;
+    private float percentToReturn = 0.3f;
 
     private void Start()
     {
         inventory = GameObject.FindWithTag("Player").GetComponent<Inventory>();
+        moneyManager = GameObject.FindWithTag("Player").GetComponent<MoneyManager>();
     }
     public void DestroyGameObject(GameObject objectToDestroy)
     {
-        if(objectToDestroy.GetComponent<PickFood>() != null || objectToDestroy.GetComponent<PickObject>() != null)
+        if(objectToDestroy.TryGetComponent<PickFood>(out PickFood pickFood))
         {
-            if(objectToDestroy.GetComponent<PickObject>() != null)
-            {
-                if(objectToDestroy.GetComponent<PickObject>().GetObjectName() != "Knife" && objectToDestroy.GetComponent<PickObject>().GetObjectName() != "Lopatka")
-                {
-                    inventory.GetAllObjects()[inventory.GetActiveSlot()].transform.SetParent(null);
-                    inventory.RemoveFromInventory(inventory.GetActiveSlot());
-                    Destroy(objectToDestroy);
-                }
-            }
-            else
-            {
-                inventory.GetAllObjects()[inventory.GetActiveSlot()].transform.SetParent(null);
-                inventory.RemoveFromInventory(inventory.GetActiveSlot());
-                Destroy(objectToDestroy);
-            }
-
+            moneyManager.ChangeMoneyValue((int)Mathf.Floor(pickFood.GetFoodTypeSO().price * percentToReturn));
+            DestroyObject(objectToDestroy);
         }
+        else if(objectToDestroy.TryGetComponent<PickObject>(out PickObject pickObject))
+        {
+            if(pickObject.GetObjectName() != "Knife" && pickObject.GetObjectName() != "Lopatka")
+            {
+                if(pickObject.GetComponent<DishManager>() != null)
+                {
+                    moneyManager.ChangeMoneyValue((int)Mathf.Floor(pickObject.GetComponent<DishManager>().GetCurrentPrice() * percentToReturn));
+                }
+                DestroyObject(objectToDestroy);
+            }
+        }
+    }
 
+    private void DestroyObject(GameObject gameObject)
+    {
+        inventory.GetAllObjects()[inventory.GetActiveSlot()].transform.SetParent(null);
+        inventory.RemoveFromInventory(inventory.GetActiveSlot());
+        Destroy(gameObject);
     }
 
 }

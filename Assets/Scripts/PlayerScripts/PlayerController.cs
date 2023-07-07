@@ -152,7 +152,7 @@ public class PlayerController : MonoBehaviour
                                 interactible.MakeAction(pickObject.name);
                             }
                         }
-                        if (hit.transform.TryGetComponent<TrashCan>(out TrashCan trashCan))
+                        if (hit.transform.TryGetComponent<TrashCan>(out TrashCan trashCan) && currnetGameObject.GetComponent<Order>() == null)
                         {
                             trashCan.DestroyGameObject(currnetGameObject);
                         }

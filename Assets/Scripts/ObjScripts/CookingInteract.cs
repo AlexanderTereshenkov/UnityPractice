@@ -1,15 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FryingPanInteractive : MonoBehaviour, IInteractible
+public class CookingInteract : MonoBehaviour, IInteractible
 {
-    [SerializeField] private GameObject foodPlace;
+    [SerializeField] private Transform foodPlace;
     [SerializeField] private RecipeSO[] recipies;
     [SerializeField] private Image progressBar;
     [SerializeField] private Color uncookedPBColor;
     [SerializeField] private Color almostCookedPBColor;
     [SerializeField] private Color cookedPBColor;
-    private float fryingTime = 30f;
+    [SerializeField] private float fryingTime = 30f;
     private float countTime;
     private GameObject playerFoodObject;
     private bool isBoardFull;
@@ -25,10 +25,10 @@ public class FryingPanInteractive : MonoBehaviour, IInteractible
 
                 cookedDish = recipies[i].output.prefab;
                 Destroy(playerFoodObject);
-                playerFoodObject = Instantiate(cookedDish, foodPlace.transform);
+                playerFoodObject = Instantiate(cookedDish, foodPlace);
                 playerFoodObject.GetComponent<PickFood>().SetCurrentInteractibleObject(this.gameObject);
-                playerFoodObject.transform.SetParent(foodPlace.transform);
-                playerFoodObject.transform.position = foodPlace.transform.position;
+                playerFoodObject.transform.SetParent(foodPlace);
+                playerFoodObject.transform.position = foodPlace.position;
                 playerFoodObject.transform.localRotation = Quaternion.Euler(0, 0, 0);
             }
         }
@@ -42,11 +42,11 @@ public class FryingPanInteractive : MonoBehaviour, IInteractible
         {
             countTime += Time.deltaTime;
             progressBar.fillAmount = countTime / fryingTime;
-            if(countTime / fryingTime >= 0.8f)
+            if (countTime / fryingTime >= 0.8f)
             {
                 progressBar.color = cookedPBColor;
             }
-            else if(countTime / fryingTime < 0.8f && countTime / fryingTime >= 0.5f)
+            else if (countTime / fryingTime < 0.8f && countTime / fryingTime >= 0.5f)
             {
                 progressBar.color = almostCookedPBColor;
             }
@@ -54,7 +54,7 @@ public class FryingPanInteractive : MonoBehaviour, IInteractible
             {
                 progressBar.color = uncookedPBColor;
             }
-            if(countTime >= fryingTime)
+            if (countTime >= fryingTime)
             {
                 SpawnFoodObject();
             }
@@ -63,13 +63,13 @@ public class FryingPanInteractive : MonoBehaviour, IInteractible
 
     public void StartAction(GameObject gameObject)
     {
-            isBoardFull = true;
-            isObjectBusy = true;
-            playerFoodObject = gameObject;
-            playerFoodObject.GetComponent<PickFood>().SetCurrentInteractibleObject(this.gameObject);
-            playerFoodObject.transform.SetParent(foodPlace.transform);
-            playerFoodObject.transform.position = foodPlace.transform.position;
-            playerFoodObject.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        isBoardFull = true;
+        isObjectBusy = true;
+        playerFoodObject = gameObject;
+        playerFoodObject.GetComponent<PickFood>().SetCurrentInteractibleObject(this.gameObject);
+        playerFoodObject.transform.SetParent(foodPlace);
+        playerFoodObject.transform.position = foodPlace.position;
+        playerFoodObject.transform.localRotation = Quaternion.Euler(0, 0, 0);
     }
 
     public void StopAction()

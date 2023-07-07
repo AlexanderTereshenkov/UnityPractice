@@ -6,10 +6,10 @@ public class DishManager : MonoBehaviour
 {
     [SerializeField] private Transform foodPlace;
     [SerializeField] private Transform plateSpawn;
-    //[SerializeField] private GameObject readyDish;
    
     private List<GameObject> currentIngrediens = new List<GameObject>();
     private RecipiesDishSO[] recipiesBook;
+    private int currentPrice;
 
     private void Start()
     {
@@ -25,6 +25,7 @@ public class DishManager : MonoBehaviour
         playerObject.GetComponent<Rigidbody>().isKinematic = true;
         playerObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         currentIngrediens.Add(playerObject);
+        currentPrice += playerObject.GetComponent<PickFood>().GetFoodTypeSO().price;
         for (int i = 0; i < recipiesBook.Length; i++)
         {
             bool isDishRight = true;
@@ -47,5 +48,10 @@ public class DishManager : MonoBehaviour
             }
 
         }
+    }
+
+    public int GetCurrentPrice()
+    {
+        return currentPrice;
     }
 }
