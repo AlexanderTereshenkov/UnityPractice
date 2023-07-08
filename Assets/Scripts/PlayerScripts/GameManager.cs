@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private int cheque = 0;
-    private int allCheques;
-    private MoneyManager moneyManager;
     [SerializeField] private RecipiesDishSO[] recipiesBook;
     [SerializeField] private TextMeshProUGUI timer;
     [SerializeField] private float secondsToEnd = 180;
     [SerializeField] private GameDataSO gamaData;
     [SerializeField] private Color redTextColor;
+    [SerializeField] private ShowGameResults showGameResults;
+
+    private int cheque = 0;
+    private int allCheques;
+    private MoneyManager moneyManager;
 
     private void Start()
     {
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
             gamaData.uncookedCheques = cheque;
             gamaData.cookedCheques = allCheques - cheque;
             gamaData.previousAmount = moneyManager.GetPreviousAmount();
-            SceneManager.LoadScene(1);
+            showGameResults.ShowResults();
         }
         if(secondsToEnd > 0 && secondsToEnd < 15)
         {
@@ -45,7 +46,7 @@ public class GameManager : MonoBehaviour
     public void SetActiveCheques(int value)
     {
         cheque += value;
-        allCheques++;
-        Debug.Log(cheque);
+        allCheques += value > 0 ? 1 : 0;
+        Debug.Log(allCheques);
     }
 }

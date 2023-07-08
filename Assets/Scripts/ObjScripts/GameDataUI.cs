@@ -8,10 +8,12 @@ public class GameDataUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI fineText;
     [SerializeField] private TextMeshProUGUI incomeText;
     [SerializeField] private GameDataSO gameData;
+    [SerializeField] private PlayerController playerController;
 
 
-    private void Start()
+    public void SetResultsUI()
     {
+        playerController.SetIsMovingPossible(false);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         cookedText.text = "Успешных заказов: " + gameData.cookedCheques.ToString();
@@ -24,4 +26,5 @@ public class GameDataUI : MonoBehaviour
         gameData.uncookedCheques = 0;
         gameData.previousAmount = 0;
     }
+
 }
