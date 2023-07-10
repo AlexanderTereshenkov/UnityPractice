@@ -8,4 +8,9 @@ public class GameDataSO : ScriptableObject
     public int uncookedCheques;
     public int cookedCheques;
 
+    public int fryingTime;
+    public int boilingTime;
+    public int fryingTimeLevel;
+    public int boilingTimeLevel;
+
 }

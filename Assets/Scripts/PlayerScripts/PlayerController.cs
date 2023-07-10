@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
                 {
                     if(hit.transform.GetComponent<PickFood>() != null)
                     {
-                        if(hit.transform.GetComponent<PickFood>().GetCurrentInteractibleObject() != null)
+                        if(hit.transform.GetComponent<PickFood>().GetCurrentInteractibleObject() != null && !inventory.IsInventoryFull())
                         {
                             hit.transform.GetComponent<PickFood>().GetCurrentInteractibleObject().GetComponent<IInteractible>().StopAction();
                         }

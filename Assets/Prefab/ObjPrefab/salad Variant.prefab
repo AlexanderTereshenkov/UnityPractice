@@ -150,4 +150,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 917d991e0095e3644856647e81f4db9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priceForDish: 70
+  priceForDish: 90

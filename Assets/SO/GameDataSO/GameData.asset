@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6726fe612e48c734893e85c29174fa7f, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  money: 200
+  money: 500
   previousAmount: 0
   uncookedCheques: 0
   cookedCheques: 0
+  fryingTime: 25
+  boilingTime: 20
+  fryingTimeLevel: 1
+  boilingTimeLevel: 1

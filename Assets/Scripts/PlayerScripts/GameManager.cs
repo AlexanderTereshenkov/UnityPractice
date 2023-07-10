@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         moneyManager = GameObject.FindWithTag("Player").GetComponent<MoneyManager>();
+
     }
     private void Update()
     {

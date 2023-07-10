@@ -125,5 +125,16 @@ public class Inventory : MonoBehaviour
         slots[pos].gameObject.GetComponent<Image>().sprite = thisObject.GetComponent<IPickable>().GetSourceImg();
     }
 
+    public bool IsInventoryFull()
+    {
+        int isInventoryFull = 0;
+        for(int i = 0; i < isSlotFull.Length; i++)
+        {
+            isInventoryFull += isSlotFull[i] == false ? 1 : 0;
+        }
+        Debug.Log(isInventoryFull);
+        return isInventoryFull == 0;
+    }
+
 
 }
