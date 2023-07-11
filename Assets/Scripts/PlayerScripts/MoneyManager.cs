@@ -19,6 +19,7 @@ public class MoneyManager : MonoBehaviour
     public void ChangeMoneyValue(int value)
     {
         money += value;
+        money = Mathf.Clamp(money, -9999, 9999);
         moneyText.text = money.ToString();
     }
     

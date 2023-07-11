@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a218eb940cc1f44ab2b6fa1a067dc20, type: 3}
   m_Name: Cooked_egg
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1655266410526019565, guid: 860bc6e61c353c244a6bf6d47917a830, type: 3}
+  prefab: {fileID: 1195786167047234485, guid: 860bc6e61c353c244a6bf6d47917a830, type: 3}
   icon: {fileID: 21300000, guid: 88f54b6c3f48f954a9c33e75be2b3fd6, type: 3}
   price: 15
